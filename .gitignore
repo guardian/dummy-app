@@ -1,0 +1,11 @@
+.idea*/
+dist/
+target/
+logs/
+log/
+readme.html
+.history
+.classpath
+.project
+.settings
+.cache
