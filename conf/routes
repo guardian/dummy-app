@@ -5,5 +5,8 @@
 # Home page
 GET     /                           controllers.Application.index
 
+GET     /dummy-app/management/manifest  controllers.Application.manifest
+GET     /dummy-app/management/healthcheck  controllers.Application.healthcheck
+
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)

@@ -1,0 +1,10 @@
+{
+    "packages":{
+        "dummy-app":{
+            "type":"executable-jar-webapp",
+            "data":{
+                "port":"8668"
+            }
+        }
+    }
+}
