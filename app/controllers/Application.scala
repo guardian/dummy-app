@@ -3,6 +3,8 @@ package controllers
 import play.api.mvc._
 
 object Application extends Controller {
+
+  var deployThreshold = 3
   
   def index = Action {
     Ok(views.html.index())
@@ -13,7 +15,12 @@ object Application extends Controller {
   }
 
   def healthcheck = Action {
-    Ok("OK").as("text/plain")
+    if (deployThreshold > 0) {
+      InternalServerError("Not ready yet!")
+      deployThreshold -= 1
+    } else {
+      Ok("OK").as("text/plain")
+    }
   }
 
 }
