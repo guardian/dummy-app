@@ -16,8 +16,8 @@ object Application extends Controller {
 
   def healthcheck = Action {
     if (deployThreshold > 0) {
-      InternalServerError("Not ready yet!")
       deployThreshold -= 1
+      InternalServerError("Not ready yet!")
     } else {
       Ok("OK").as("text/plain")
     }
