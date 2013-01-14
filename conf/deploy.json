@@ -3,7 +3,9 @@
         "dummy-app":{
             "type":"executable-jar-webapp",
             "data":{
-                "port":"8668"
+                "port":"8668",
+                "waitseconds":"30",
+                "checkseconds":"30"
             }
         }
     }

@@ -5,6 +5,7 @@ import play.api.mvc._
 object Application extends Controller {
 
   var deployThreshold = 3
+  val ALWAYS_FAIL = true
   
   def index = Action {
     Ok(views.html.index())
@@ -15,7 +16,7 @@ object Application extends Controller {
   }
 
   def healthcheck = Action {
-    if (deployThreshold > 0) {
+    if (ALWAYS_FAIL || deployThreshold > 0) {
       deployThreshold -= 1
       InternalServerError("Not ready yet!")
     } else {
