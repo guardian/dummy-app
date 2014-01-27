@@ -1,8 +1,9 @@
 {
+    "stack":"deploy",
     "packages":{
         "dummy-app":{
             "type":"executable-jar-webapp",
-            "apps":["deploy::node"],
+            "apps":["node"],
             "data":{
                 "port":"8668"
             }
