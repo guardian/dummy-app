@@ -1,5 +1,5 @@
 {
-    "stack":"deploy",
+    "defaultStacks":["deploy"],
     "packages":{
         "dummy-app":{
             "type":"executable-jar-webapp",
