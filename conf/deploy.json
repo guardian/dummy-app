@@ -7,6 +7,18 @@
             "data":{
                 "port":"8668"
             }
+        },
+				"cloud-formation":{
+            "type":"cloud-formation",
+            "data": {
+                "stackName": "dummy",
+                "templatePath": "dummy.json"
+            }
+        }		
+    },
+    "recipes":{
+				"Update CloudFormation":{
+            "actionsBeforeApp": ["cloud-formation.updateStack"]
         }
-    }
+		}
 }
