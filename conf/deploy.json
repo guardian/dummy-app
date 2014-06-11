@@ -17,6 +17,9 @@
         }		
     },
     "recipes":{
+				"default":{
+						"actionsPerHost": ["dummy-app.deploy"]
+				},
 				"Update CloudFormation":{
             "actionsBeforeApp": ["cloud-formation.updateStack"]
         }
